@@ -1,0 +1,32 @@
+<! DOCTYPE html >
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <meta charset="utf-8"> 
+  </head>
+  <body>
+  	<h1>The Guessing Game, Yo.</h1>
+  	<p>Guess a number between 1 and 10, yo.</p>
+  	<p>You have made <span id="numGuesses">0</span> Guesses, yo.</p>
+  	<form onsubmit="return answerchecker()">
+  		<input id="guess" type="text" placeholder="Enter #, yo!" autofocus>
+      <input type="submit" value="Guess, yo!">
+  	</form>	
+  	<script type="text/javascript">
+  	 var answer = Math.floor(Math.random() * 11)
+  	 var numGuesses = 0;
+  	 function answerchecker() {
+  	 var guess = document.getElementById("guess").value;
+  	 if(guess == answer) {
+  	 alert("You are correct, yo!");	
+  	 }
+  	 else {
+  	 	numGuesses = numGuesses + 1;
+  	 	document.getElementById("numGuesses").innerHTML = numGuesses;
+  	 	alert("You are wrong, yo :(")
+  	 }
+     return false;
+  	 }  	   
+  	</script>
+  </body>	
+</html>
