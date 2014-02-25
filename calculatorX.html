@@ -1,0 +1,23 @@
+<! DOCTYPE html >
+<html>
+  <head>
+    <title>Live Calculator.</title>
+    <meta charset="utf-8"> 
+  </head>
+  <body>
+    <div>
+  	<p>Enter the fields to calculate.</p>
+    <input type="text" id="expression" value="1 + 1" />
+    <h3>Result: </h3><h3 id="result"></h3>
+  </div>
+  	<script>
+    var input = document.getElementById('expression');
+input.onkeyup = function () {
+    var result = document.getElementById('result');
+    result.innerHTML = eval(this.value);
+};
+
+input.onkeyup(); 	   
+  	</script>
+  </body>	
+</html>

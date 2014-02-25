@@ -1,0 +1,50 @@
+<! DOCTYPE html >
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <meta charset="utf-8"> 
+  </head>
+  <body>
+    <h1>Calculator.</h1>
+    <p>Do math.</p>
+    
+    <form onsubmit="return calculator()">
+      <input id="firstnumber" type="text" placeholder="Enter #" >
+      <input id="operator" type="text" placeholder="Enter Operator">
+      <input id="secondnumber" type="text" placeholder="Enter #" >
+
+      <input type="submit" value="Calculate">
+    </form>
+    <p>The answer is <span id="solution"></span>.</p> 
+    <script type="text/javascript">
+      
+      var addition = "+"
+      var subtraction = "-"
+      var division = "/"
+      var multiplication = "*"
+      var solution = 0
+      function calculator () {       
+        var firstnumber = parseInt(document.getElementById("firstnumber").value);
+        var operator = document.getElementById("operator").value;
+        var secondnumber = parseInt(document.getElementById("secondnumber").value);
+         
+
+
+        if(operator == addition) {
+          solution = firstnumber + secondnumber;
+        }
+        if(operator == subtraction) {
+          solution = firstnumber - secondnumber;
+        }  
+       if(operator == division) {
+          solution = firstnumber / secondnumber;
+        }  
+       if(operator == multiplication) {
+          solution = firstnumber * secondnumber;
+        }   
+     document.getElementById("solution").innerHTML = solution;         
+     return false;
+     }       
+    </script>
+  </body> 
+</html>
